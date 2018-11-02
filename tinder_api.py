@@ -46,7 +46,7 @@ def get_recommendations():
     Returns a list of users that you can swipe on
     '''
     try:
-        r = requests.get('https://api.gotinder.com/user/recs', headers=headers)
+        r = requests.get('https://api.gotinder.com/v2/recs/core?locale=en', headers=headers)
         return r.json()
     except requests.exceptions.RequestException as e:
         print("Something went wrong with getting recomendations:", e)
@@ -200,14 +200,13 @@ def superlike(person_id):
         print("Something went wrong. Could not superlike:", e)
 
 
-def like(person_id):
+def like(person_id, s_num):
     try:
-        url = config.host + '/like/%s' % person_id
+        url = config.host + '/like/' + person_id + '?locale=en&s_number=' + s_num
         r = requests.get(url, headers=headers)
         return r.json()
     except requests.exceptions.RequestException as e:
         print("Something went wrong. Could not like:", e)
-
 
 def dislike(person_id):
     try:

@@ -156,8 +156,8 @@ def pause():
     realistic amount of time between actions to not make Tinder...
     suspicious!
     '''
-    nap_length = 3 * random()
-    print('Napping for %f seconds...' % nap_length)
+    nap_length = 3 * (1 + random())
+    #print('Napping for %f seconds...' % nap_length)
     sleep(nap_length)
 
 if __name__ == '__main__':
