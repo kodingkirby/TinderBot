@@ -3,10 +3,11 @@
 from datetime import date, datetime
 from random import random
 from time import sleep
-
+import requests
 import config
 import tinder_api as api
-
+#from PIL import Image
+import requests
 
 '''
 This file collects important data on your matches,
@@ -69,6 +70,17 @@ def get_photos(person):
         photo_urls.append(photo['url'])
     return photo_urls
 
+def print_photos(person):
+    '''
+    Prints a list of photo urls
+    '''
+    photos = person['photos']
+    photo_urls = []
+    for photo in photos:
+        photo_urls.append(photo['url'])
+        #im = Image.open(urllib.urlopen(photo['url']))
+        im = Image.open(requests.get(photo['url'], stream=True).raw)
+    return photo_urls
 
 def calculate_age(birthday_string):
     '''

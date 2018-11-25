@@ -5,3 +5,10 @@ api_abstract.py
 __pycache__
 find.py
 *.log
+matches.json
+db.json
+updates.json
+user_rec_db.json
+matches.json
+TinderAPI.ipynb
+requestsTinderAPI.txt
