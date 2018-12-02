@@ -104,8 +104,8 @@ def autoliker(how_many_likes):
             for r in recommended_users:
                 print('Liking: ' + r['user']['name'] + ' ID: ' + r['user']['_id'])
                 response = tinder_api.like(r['user']['_id'], str(r['s_number']))
-                features.pause()
-                features.pause()
+                #features.pause()
+                #features.pause()
                 responses.append(response)
                 #if response['match'] == True:
                 #    print(r['name'] + ' matched with you!')
@@ -148,7 +148,7 @@ def silent_mode(fb_username, fb_password):
     while current < runs:
         autoliker(likeAtATime)
         randTime = 1200 + (random() * 10 * 60) #adds a random num of minutes from 1-90 on top of 20 baseline 
-        print('sleeping for %d seconds...' % randTime)
+        print('sleeping for %d minutes...' % (randTime/60))
         sleep(randTime) # randTime is between 20-40 minutes.
         current += 1
 
