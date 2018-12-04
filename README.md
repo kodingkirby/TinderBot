@@ -1,5 +1,5 @@
 # Tinderbot
->Likes people. A lot of people. 
+> Take the guesswork out of online dating
 
 ![screenshot](docs/screenshots/screenshot1.png)
 
@@ -7,7 +7,7 @@
 
 OS X & Linux with Docker:
 
-'''sh
+'''
 docker build -t tinderbot .
 docker run -it tinderbot
 '''
@@ -15,7 +15,8 @@ docker run -it tinderbot
 This probably works on Windows too, just haven't tested it yet.
 
 Native Python3:
-'''sh
+
+'''
 pip install robobrowser requests bs4 config tinydb lxml
 python3 main.py
 '''
@@ -34,17 +35,17 @@ TinderBot has the capability to stay on in the background, liking people through
 _To use silent mode, you need to first rename tinder_config_ex.py to config.py and populate the username and password fields_
 
 Run Silent Mode:
-'''sh
+'''
 python3 main.py s
 '''
 
 Optionally, you can specific how many 'bursts' to complete before stopping:
-'''sh
+'''
 python3 main.py s 15
 '''
 
 A burst value of 999 will run perpetually:
-'''sh
+'''
 python3 main.py 999
 '''
 
