@@ -130,12 +130,12 @@ def help_menu(list):
         print(string)
 
 def cli_autoliker():
-    target_likes = input('how many ppl you tryna like? (try 0): ')
+    target_likes = input('Enter number of people you wish to swipe right on: ')
     tl = int(target_likes)
     autoliker(tl)
 
 def silent_mode(fb_username, fb_password):
-    runs = 5
+    runs = 999
     current = 0
     likeAtATime = 0
     if len(sys.argv) > 2:
@@ -147,10 +147,12 @@ def silent_mode(fb_username, fb_password):
     #each run averages 15 profiles returned
     while current < runs:
         autoliker(likeAtATime)
-        randTime = 1200 + (random() * 10 * 60) #adds a random num of minutes from 1-90 on top of 20 baseline 
+        randTime = 1200 + (random() * 10 * 60) #adds a random time top of 20 baseline 
         print('sleeping for %d minutes...' % (randTime/60))
         sleep(randTime) # randTime is between 20-40 minutes.
         current += 1
+        if(runs == 999):
+            current = 0 # I apologize in advance
 
 def cli_mode():
     clear_screen()
@@ -168,9 +170,7 @@ def cli_mode():
     s.init_db()
     #todo: database search/view
     #todo: message pickup line
-    #-how many girls to message?
-    #-I am going to use the pickup lines in pickup.txt
-    #-
+    
     options = ['🤖 Autoliker ', '🔑 Check Auth Tokens ', '🛠 Stealth Settings ', '❌ Quit']
     help = ''
     while ui.run:

@@ -1,0 +1,6 @@
+robobrowser 
+requests 
+bs4 
+config 
+tinydb
+lxml
