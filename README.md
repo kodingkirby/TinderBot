@@ -1,7 +1,6 @@
 # Tinderbot
-> Automate your online dating
 
-Does your thumb cramp from repeated right swiping? Does it ever feel like online dating is a numbers game? Tinderbot is your solution. This app will auto-like user profiles and optionally store all personal information to a database for further analysis.
+Proof of concept autoliker script that scrapes user profiles into a database for later analysis. 
 
 ![screenshot](docs/screenshots/screenshot1.png)
 
@@ -21,9 +20,9 @@ python3 main.py
 
 ## Quickstart
 
-Once you launch the app, you'll be prompted for credentials. Type in the email address and password associated with your Facebook account. These are used by a robobrowser script to retrieve an Oauth token from Facebook to use with Tinder.
+Once you launch the app, you'll be prompted for credentials. These are used by a robobrowser script to retrieve an Oauth token from Facebook to use with Tinder's API endpoint. Type in the full email address and password associated with its Facebook account.
 
-Once authenticated, you can start the autoliker.
+Once authenticated, you can start the autoliker by pressing 1 then Enter.
 
 ![screenshot](docs/screenshots/screenshot2.png)
 
@@ -49,6 +48,6 @@ python3 main.py 999
 ```
 
 ## How it works
-I've started documenting my methods to educate others on the current state of mobile app security. I've outlined some of my methods in the [docs](docs/tinder_api.md) folder
+BurpSuite write up and sample data can be found in the [docs](docs/tinder_api.md) folder
 
 This app carries no warranty, and is for educational use only
