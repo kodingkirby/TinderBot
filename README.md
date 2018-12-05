@@ -1,5 +1,7 @@
 # Tinderbot
-> Take the guesswork out of online dating
+> Automate your online dating
+
+Does your thumb cramp from repeated right swiping? Does it ever feel like online dating is a numbers game? Tinderbot is your solution. This app will auto-like user profiles and optionally store all personal information to a database for further analysis.
 
 ![screenshot](docs/screenshots/screenshot1.png)
 
