@@ -49,6 +49,6 @@ python3 main.py 999
 ```
 
 ## How it works
-I've started documenting my methods to educate others on the current state of mobile app security. I've outlined some of my methods in the [docs](docs) folder
+I've started documenting my methods to educate others on the current state of mobile app security. I've outlined some of my methods in the [docs](docs/tinder_api.md) folder
 
 This app carries no warranty, and is for educational use only
